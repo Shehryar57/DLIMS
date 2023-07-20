@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* ---------Navbar ---------------- */
+ul {
+  list-style: none;
+  margin: 0;
+}
+.active {
+  color: rgb(254, 152, 0);
+  border-bottom: 2px solid rgb(254, 152, 0);
+}
+.navbar {
+  margin: 30px 40px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .nav-items li {
+  display: inline-block;
+  padding: 20px 20px;
+  margin-bottom: 5px;
+}
+.navbar .nav-items li:hover {
+  color: rgb(254, 152, 0);
+  border-bottom: 2px solid rgb(254, 152, 0);
+}
+
+.navbar .nav-items li a {
+  color: green;
+  text-decoration: none;
+  font-size: 20px;
+}
+.navbar ul li a:hover {
+  text-decoration: none;
+  color: black;
+}
+/* ---------------- Slider ---------------- */
+.slider {
+  width: 100%;
+  height: 450px;
+  color: white;
+  background: url(../Images/banner.png);
+}
+.slider .slider-content {
+  text-align: center;
+  padding: 80px 0;
+}
+.slider-content h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 60px;
+  margin-bottom: 10px;
+  transform: translateY(-600px);
+  animation: 1.2s slideIn ease-in-out forwards 1s;
+  z-index: 10;
+  opacity: 0;
+  position: relative;
+}
+.slider-content h1 span {
+  color: rgb(254, 152, 0);
+}
+.slider-content h4 {
+  font-family: 'Cinzel', serif;
+  margin-top: 10px;
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+.slider-content button {
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  color: white;
+  padding: 10px 20px;
+  background: rgb(254, 152, 0);
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.slider-content button:hover {
+  background: rgb(206, 135, 28);
+}
+/* ------------Animation----------- */
+
+h1::before {
+  content: '';
+  width: 0%;
+  height: 0px;
+  position: absolute;
+  bottom: -10px;
+  animation: 1s underline ease-in-out forwards 2s;
+}
+
+@keyframes skewBg {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes slideIn {
+  100% {
+    transform: translatex(0px);
+    opacity: 1;
+  }
+}
+/* ------------ Login Form ----------- */
+.login-form {
+  background: url(../Images/Log-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 490px;
+  color: white;
+  text-align: center;
+}
+
+.login-box {
+  color: black;
+  padding: 80px 0px;
+  padding-left: 480px;
+  text-align: center;
+}
+.login-box input,
+.login-box label {
+  font-size: 30px;
+  background: none;
+  border: none;
+}
+.login-box input[type='text'],
+.login-box input[type='password'] {
+  border: 2px solid rgb(206, 135, 28);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 8px 14px;
+  caret-color: white;
+  outline: none;
+  margin: 8px 0;
+  font-size: 28px;
+}
+.login-box input[type='submit'] {
+  background: rgb(206, 135, 28);
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  padding: 10px 100px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.login-box input[type='text']:hover,
+.login-box input[type='password']:hover,
+.login-box input[type='submit']:hover {
+  border: 2px solid rgb(248, 153, 9);
+}
+::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+.login-box a {
+  font-size: 14px;
+  color: white;
+}
+/* ------About Section----- */
+.heading h1{
+  text-align: center;
+  font-size: 50px;
+  margin-top: 50px;
+}
+h1:hover{
+  color: green;
+}
+
+.details {
+  display: flex;
+}
+.main-box {
+  width: 65%;
+}
+.heading h1 {
+  margin-left: 40px;
+  font-size: 30px;
+  font-family: 'Open Sans', sans-serif;
+}
+.sidebar {
+  padding-bottom: 20px;
+}
+
+.box {
+  margin: 20px 40px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  box-shadow: -1px -2px 22px lightblue;
+  background: rgba(255, 255, 255, 0.4);
+}
+summary {
+  padding: 5px 10px;
+  color: green;
+  font-weight: bold;
+  font-size: 18px;
+}
+summary:focus {
+  outline: none;
+}
+.box details {
+  border: none;
+  padding: 10px;
+  margin: 5px 20px;
+  font-size: 17px;
+  line-height: 22px;
+}
+/* ------Banner----- */
+
+.banner {
+  width: 100%;
+  height: 400px;
+  color: white;
+  margin: 20px 0;
+  background: url(../Images/banner-2.jpg);
+  background-size: cover;
+}
+.banner .banner-content {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.banner-content h4 {
+  font-family: 'Cinzel', serif;
+  margin-top: 10px;
+  font-size: 50px;
+  margin-bottom: 15px;
+  margin-top: 90px;
+}
+.banner-content button {
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  color: white;
+  padding: 10px 20px;
+  background: rgb(254, 152, 0);
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.banner-content button:hover {
+  background: rgb(206, 135, 28);
+}
+
+/* ------Banner----- */
+
+
+.mono{
+    margin: 60px 20px;
+}
+.mono h1{
+  text-align: center;
+  font-size: 30px ;
+  font-family: 'Open Sans', sans-serif;
+}
+.mono h1:hover{
+  color: green;
+}
+.monograms{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* ------Footer----- */
+footer ul {
+  display: flex;
+
+  color: rgb(255, 255, 255, 0.8);
+}
+footer {
+  background: rgba(0, 0, 0, 0.8);
+}
+footer ul li h3 {
+  font-size: 24px;
+}
+footer ul li {
+  width: 25%;
+  padding: 10px 20px;
+}
+.footer-text {
+  text-align: center;
+}
+.footer-text p {
+  color: rgb(255, 255, 255, 0.8);
+  padding: 10px 0;
+  margin-bottom: 0;
+}
+/* Second page  */
+.heading-A h1{
+  margin-left: 50px;
+  font-size: 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  color:#444;
+  display: inline-block;
+}
+.heading-A h1:hover{
+  border-bottom: 1px solid green;
+}
+/* last page */
+
+.screen {
+  width: 100%;
+  height: 850px;
+  color: white;
+  background: url(../Images/screenshot.png);  
+  background-repeat: no-repeat;  
+  background-size: contain;
+  margin-top: 100px;
+}
+/*  */
+
+ /* .search {
+  width: 100%;
+  position: relative;
+  display: flex;
+  background-color:red;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+.search-box{
+  width: 60%;
+  margin: 100px;
+
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}  */
+.search-div{
+  width 400px;
+  height: 150px;
+  background-color:gray;
+}
+.search-div .center{
+  width 40px;
+  height: 50px;
+  background-color: red;
+  margin-top: 30px;
+  
+}
+
+ 
